@@ -22,10 +22,16 @@ public class SignUpActivity extends AppCompatActivity {
     private Button Complete_button;
     FirebaseAuth firebaseAuth;
 
+    Button go;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
+
+//        액션바
+        getSupportActionBar().setTitle("회원가입");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         editID = (EditText) findViewById(R.id.ID);
         editPW = (EditText) findViewById(R.id.PW);
@@ -56,6 +62,7 @@ public class SignUpActivity extends AppCompatActivity {
                         });
             }
         });
+
 
     }
 

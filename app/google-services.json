@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "817565306391",
+    "firebase_url": "https://doitvocafinal.firebaseio.com",
+    "project_id": "doitvocafinal",
+    "storage_bucket": "doitvocafinal.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:817565306391:android:872d3f37220a63a0",
+        "android_client_info": {
+          "package_name": "com.example.sample_result"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "817565306391-camcmh6gbdtu9krvf1si9bj9foffpusj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sample_result",
+            "certificate_hash": "cdb1fccb1a6d052cd4dd73812cf823eea0f95f79"
+          }
+        },
+        {
+          "client_id": "817565306391-8mqf72gv1a008rc2f3nru8b6f046aumv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7CmPd7nq3WIzbp4wsLfKS5Ui2KFznie4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "817565306391-8mqf72gv1a008rc2f3nru8b6f046aumv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

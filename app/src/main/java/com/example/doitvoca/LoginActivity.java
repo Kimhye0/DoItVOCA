@@ -34,6 +34,7 @@ public class LoginActivity extends AppCompatActivity {
         loginbtn = (Button) findViewById(R.id.loginbtn);
         mAuth = FirebaseAuth.getInstance();
 
+        //회원가입 activity로 전환
         Button Signup_button = (Button) findViewById(R.id.Signup_button);
         Signup_button.setOnClickListener(new View.OnClickListener(){
 
@@ -48,32 +49,39 @@ public class LoginActivity extends AppCompatActivity {
         loginbtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+
                 String ID = loginID.getText().toString().trim();
                 String PW = loginPW.getText().toString().trim();
 
-        mAuth.signInWithEmailAndPassword(ID, PW)
-                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            // Sign in success, update UI with the signed-in user's information
-                            Log.d("TAG","signInWithEmail:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
-                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                            startActivity(intent);
-                            finish();
+                if (ID.getBytes().length <= 0||PW.getBytes().length <= 0 ) {
+                    Toast.makeText(LoginActivity.this,"이메일 또는 비밀번호를 입력해주세요.", Toast.LENGTH_SHORT).show();
+                }
+                else{
 
-                            //updateUI(user);
-                        } else {
-                            // If sign in fails, display a message to the user.
-                            //Log.w("signInWithEmail:failure", task.getException());
-                            Toast.makeText(LoginActivity.this,"Authentication failed.", Toast.LENGTH_SHORT).show();
-                            //updateUI(null);
-                        }
+                    mAuth.signInWithEmailAndPassword(ID, PW)
+                            .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(@NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        // 로그인 성공하면 로그찍고 메인 activitiy로 넘어감
+                                        Log.d("TAG","signInWithEmail:success");
+                                        FirebaseUser user = mAuth.getCurrentUser();
+                                        Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                        startActivity(intent);
+                                        finish();
+                                    } else {
+                                        // If sign in fails, display a message to the user.
+                                        //Log.w("signInWithEmail:failure", task.getException());
+                                        Toast.makeText(LoginActivity.this,"이메일 또는 비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show();
+                                        //updateUI(null);
+                                    }
 
-                        // ...
-                    }
-                });
+                                    // ...
+                                }
+                            });
+                }
+
+
 
 
             }

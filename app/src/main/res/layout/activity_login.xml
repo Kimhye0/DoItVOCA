@@ -8,7 +8,7 @@
 
     <EditText
         android:id="@+id/loginID"
-        android:layout_width="170dp"
+        android:layout_width="250dp"
         android:layout_height="45dp"
         android:layout_marginTop="310dp"
         android:layout_marginBottom="26dp"
@@ -18,14 +18,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginbtn"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/loginPW"
-        android:layout_width="170dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="226dp"
         android:hint="비밀번호"
+        android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,9 +35,10 @@
 
     <Button
         android:id="@+id/loginbtn"
-        android:layout_width="170dp"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:background="@drawable/button_default"
         android:text="로그인"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -44,17 +47,28 @@
 
     <Button
         android:id="@+id/Signup_button"
+        style="?android:attr/borderlessButtonStyle"
         android:layout_width="170dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="회원가입"
 
         android:background="#00ff0000"
+        android:text="회원가입"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/loginbtn"
-        style="?android:attr/borderlessButtonStyle" />
+        app:layout_constraintTop_toBottomOf="@+id/loginbtn" />
 
+    <ImageView
+        android:layout_width="290dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/mainlogo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.239" />
 
 </android.support.constraint.ConstraintLayout>

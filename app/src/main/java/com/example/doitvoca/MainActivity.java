@@ -8,8 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-//안드로이드의 화면이 Activity
-//MainActivity가 AppCompatActivity를 상속함
+//로그인 성공시 메인으로 넘어가는 것 보여주기 위해 만든 페이지 !!
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

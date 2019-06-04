@@ -18,7 +18,7 @@ import android.widget.Toast;
 
 public class SearchActivity extends AppCompatActivity {
     private WebView webView;
-    private ImageButton button;
+    private ImageButton AddWordList_button;
     private static String dictionaryUrl = "https://alldic.daum.net/";
 
     @Override
@@ -33,12 +33,12 @@ public class SearchActivity extends AppCompatActivity {
         webView.setWebViewClient(new WebViewClientClass());
 
         //버튼
-        button = findViewById(R.id.button);
-        button.setVisibility(Button.INVISIBLE);
+        AddWordList_button = findViewById(R.id.button);
+        AddWordList_button.setVisibility(Button.INVISIBLE);
         //단어 저장 리스너
-        button.setOnClickListener(new Button.OnClickListener() {
+        AddWordList_button.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-                Toast.makeText(getApplication(),"단어 저장",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplication(),"단어 저장 완료!",Toast.LENGTH_LONG).show();
             }
         });
 
@@ -58,6 +58,7 @@ public class SearchActivity extends AppCompatActivity {
         //백키를 누르면 액티비티를 종료하지 않고 이전 페이지로 돌아간다.
         if ((keyCode == KeyEvent.KEYCODE_BACK) && webView.canGoBack()) {
             webView.goBack();
+            AddWordList_button.setVisibility(Button.GONE);
             return true;
         }
         return super.onKeyDown(keyCode, event);
@@ -73,7 +74,7 @@ public class SearchActivity extends AppCompatActivity {
             view.loadUrl(url);
 
             //단어 추가 버튼 활성화
-            button.setVisibility(Button.VISIBLE);
+            AddWordList_button.setVisibility(Button.VISIBLE);
             return true;
         }
 

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="0,1,2"
+    android:background="#FFD9FA">
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:text="DO IT VOCA"
+        android:textAlignment="center"
+        android:textSize="80px"
+        android:textStyle="bold"
+        android:background="@drawable/text"
+        android:layout_marginBottom="7dp"/>
+
+    <!-- 테이블의 두 번째 행 -->
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/menu_voca"
+            android:layout_width="100dp"
+            android:layout_height="250dp"
+            android:background="@drawable/button"
+            android:text="단어장"
+            android:textSize="50px" />
+
+        <Button
+            android:id="@+id/menu_quiz"
+            android:layout_width="100dp"
+            android:layout_height="250dp"
+            android:background="@drawable/button"
+            android:text="단어 퀴즈"
+            android:textSize="50px" />
+
+    </TableRow>
+
+    <!-- 테이블의 세 번째 행 -->
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <Button
+            android:id="@+id/menu_search"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:background="@drawable/button"
+            android:text="단어 검색"
+            android:textSize="50px" />
+
+        <Button
+            android:id="@+id/menu_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:background="@drawable/button"
+            android:text="환경설정"
+            android:textSize="50px" />
+    </TableRow>
+</TableLayout>

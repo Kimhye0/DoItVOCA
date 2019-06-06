@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="80dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="75"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/EnglishInput"
+            android:layout_width="360dp"
+            android:layout_height="0dp"
+            android:layout_weight="50"
+            android:background="#14F8F6F6"
+            android:backgroundTint="#2F9E9393"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="단어"
+            android:textColor="#0F0F0F"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/MeaningInput"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="40"
+            android:background="#14F8F6F6"
+            android:backgroundTint="#2F9E9393"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:text="뜻"
+            android:textSize="14sp" />
+    </LinearLayout>
+    <View
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1" />
+
+    <ImageButton
+        android:id="@+id/memorization_button"
+        android:layout_width="61dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0"
+        android:onClick="ChangeState"
+        android:src="@drawable/btn_selector"
+        android:backgroundTint="#2F9E9393"
+        />
+</LinearLayout>

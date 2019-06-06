@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.example.doitvoca.QuizActivity">
+
+    <RelativeLayout
+        android:background="#3F51B5"
+        android:id="@+id/rl_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hyunjin님!"
+            android:layout_marginLeft="30dp"
+            android:textSize="25dp"
+            android:layout_centerVertical="true"
+            android:textColor="#ffffff"
+            />
+
+        <ImageButton
+            android:id="@+id/rl_ib_homebutton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:onClick="returnTop"
+            android:background="@drawable/home_24dp" />
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_countLabel"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_below="@id/rl_topbar"
+        android:background="#e0e0e0"
+        >
+        <TextView
+            android:id="@+id/countLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Q1"
+            android:textSize="22sp"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+    <Button
+        android:id="@+id/answerBtn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/answerBtn2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_default"
+        android:textColor="#ffffff"
+        android:onClick="checkAnswer"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/answerBtn2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/answerBtn3"
+        android:textColor="#ffffff"
+        android:layout_centerHorizontal="true"
+        android:onClick="checkAnswer"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_default"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/answerBtn3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/answerBtn4"
+        android:textColor="#ffffff"
+        android:layout_centerHorizontal="true"
+        android:onClick="checkAnswer"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_default"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/answerBtn4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textColor="#ffffff"
+        android:layout_centerHorizontal="true"
+        android:onClick="checkAnswer"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_default"
+        android:text="Button" />
+
+    <TextView
+        android:id="@+id/questionLabel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/answerBtn1"
+        android:layout_below="@+id/rl_countLabel"
+        android:layout_centerHorizontal="true"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:paddingTop="20sp"
+        android:textColor="#000000"
+        android:text="Question"
+        android:textSize="22sp" />
+
+</RelativeLayout>

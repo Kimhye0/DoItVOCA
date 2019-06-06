@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.example.doitvoca.ResultActivity">
+
+    <RelativeLayout
+        android:background="#3F51B5"
+        android:id="@+id/rl_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hyunjin님!"
+            android:layout_marginLeft="30dp"
+            android:textSize="25dp"
+            android:layout_centerVertical="true"
+            android:textColor="#ffffff"
+            />
+
+        <ImageButton
+            android:id="@+id/rl_ib_homebutton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:onClick="returnTop"
+            android:background="@drawable/home_24dp" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#e2e2e2"
+        android:text="Result"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="30dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="0dp"
+        android:background="#c6c6c6" />
+
+    <LinearLayout
+        android:id="@+id/ll_result_top"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="80dp"
+            android:text="Correct Number    :"
+            android:textColor="#16bc00"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/resultLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="80dp"
+            android:text="3개"
+            android:textColor="#000000"
+            android:textSize="25dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_result_medium"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@+id/resultLabel">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="Incorrect Number :"
+            android:textColor="#ef0000"
+            android:textSize="25dp" />
+        <TextView
+            android:id="@+id/totalScoreLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="2개"
+            android:textColor="#000000"
+            android:textSize="25dp" />
+
+        <!--<TextView
+            android:id="@+id/totalScoreLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="333"
+            android:textSize="30sp" />-->
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+        <Button
+            android:layout_centerInParent="true"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:onClick="returnTop"
+            android:background="@drawable/button_default"
+            android:textColor="#ffffff"
+            android:text="Home"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#bebebe" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/congraduation" />
+    </RelativeLayout>
+
+</LinearLayout>

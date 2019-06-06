@@ -1,23 +1,133 @@
-<?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-    <!-- android: 이란 안드로이드에서 제공하는 API 기본 속성을 쓸때붙임 -->
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.example.doitvoca.MainActivity">
+    <RelativeLayout
+        android:background="#3F51B5"
+        android:id="@+id/rl_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hyunjin님!"
+            android:layout_marginLeft="30dp"
+            android:textSize="25dp"
+            android:layout_centerVertical="true"
+            android:textColor="#ffffff"
+            />
 
-    <Button
-        android:id="@+id/Signup_button"
+    </RelativeLayout>
+
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="회원가입"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginTop="60dp"
+        android:text="DoIT Voca"
+        android:textColor="#3F51B5"
+        android:textSize="55dp"
+        android:textStyle="bold" />
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:id="@+id/menu_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="100dp"
+            android:background="#3F51B5"
+            android:onClick="startSearch"
+            android:text="단어검색"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_search_black_50dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/menu_voca"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="10dp"
+            android:background="#3F51B5"
+            android:onClick="startVoca"
+            android:text="단어장"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_book_black_24dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_marginLeft="100dp"
+            android:id="@+id/menu_quiz"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:background="#3F51B5"
+            android:onClick="startQuiz"
+            android:text="단어퀴즈"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_casino_black_24dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_marginLeft="100dp"
+            android:id="@+id/menu_setting"
+            android:layout_width="250dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:background="#3F51B5"
+            android:onClick="startSetting"
+            android:text="환경설정"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_settings_black_24dp" />
+    </RelativeLayout>
+
+</LinearLayout>

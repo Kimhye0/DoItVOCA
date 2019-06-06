@@ -9,15 +9,6 @@
         android:id="@+id/rl_topbar"
         android:layout_width="match_parent"
         android:layout_height="48dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="hyunjin님!"
-            android:layout_marginLeft="30dp"
-            android:textSize="25dp"
-            android:layout_centerVertical="true"
-            android:textColor="#ffffff"
-            />
 
         <ImageButton
             android:id="@+id/rl_ib_homebutton"

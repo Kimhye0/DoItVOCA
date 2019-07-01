@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "295368558117-ro2bpk1pteu4fceo7dma04dmb20c7jh7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.doitvoca",
+            "certificate_hash": "050a6438842517708334c6296f9fbd10f47d3d47"
+          }
+        },
+        {
           "client_id": "295368558117-q4pbe5um4rjtc7g3gfajt42lc98c5o6d.apps.googleusercontent.com",
           "client_type": 3
         }
